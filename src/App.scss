@@ -1,0 +1,278 @@
+// font Family
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+// Colors
+$color-primary: #0e918c;
+$color-half-black: #1a202e;
+$color-light-yellow: #ffd704;
+$color-lighter-yellow: #ffefb7;
+$color-green: #2cb764;
+$color-text-green: #33bc03;
+$color-orange: #f6850f;
+$color-red: #f6460f;
+$color-text-red: #d30b0b;
+$color-danger-red: #ff4b55;
+$color-purple: #23183d;
+$color-blue: #1694db;
+$color-deep-blue: #0e5a91;
+$color-background-grey: #e5e5e5;
+$color-sea-blue: #61daeb;
+$color-darkest-grey: #424e68;
+$color-darker-grey: #3f526d;
+$color-dark-grey: #7a8da0;
+$color-grey: #c4c4c4;
+$color-grey-89: #898989;
+$color-grey9: #e9e9e9;
+$color-greyca: #cacaca;
+$color-light-orange: #eb9411;
+
+//---------------//
+$color-black-gradient: linear-gradient(91.34deg, #1a202e 0%, #333e59 100%);
+$color-orange-gradient: linear-gradient(92.09deg, #f6850f 1.76%, #f6b40f 117.76%);
+$color-greener-gradient: linear-gradient(92.09deg, #2cb965 1.76%, #32e37a 117.76%);
+$color-red-gradient: linear-gradient(92.41deg, #f6460f 0%, #fe2b5e 100%);
+$color-green-gradient: linear-gradient(92.23deg, #0e918c 1.87%, #23e0d9 100%);
+$color-green-gradient-nav: linear-gradient(90deg, #2cb764 10.76%, #0e918c 133.7%);
+// Gradient Classes
+.color-black-gradient {
+  background: $color-black-gradient;
+}
+.color-orange-gradient {
+  background: $color-orange-gradient;
+}
+.color-red-gradient {
+  background: $color-red-gradient;
+}
+.color-green-gradient {
+  background: $color-green-gradient;
+}
+.color-green-gradient-nav {
+  background: $color-green-gradient-nav;
+}
+.color-greener-gradient{
+  background: $color-greener-gradient;
+}
+//-------------------//
+$small-box-shadow: 2px 3px 5px rgba(14, 145, 140, 0.3);
+$big-box-shadow: 0px 0px 7px 3px rgba(14, 145, 140, 0.2);
+$font-size-8: 8px;
+$font-size-10:10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-36: 36px;
+$font-size-40: 40px;
+
+$font-monst: "Montserrat";
+
+.font-size-8 {
+  font-size: $font-size-8;
+}
+.font-size-10 {
+  font-size: $font-size-10;
+}
+.font-size-12 {
+  font-size: $font-size-12;
+}
+
+.font-size-14 {
+  font-size: $font-size-14;
+}
+
+.font-size-16 {
+  font-size: $font-size-16;
+}
+
+.font-size-18 {
+  font-size: $font-size-18;
+}
+
+.font-size-22 {
+  font-size: $font-size-22;
+}
+
+.font-size-24 {
+  font-size: $font-size-24;
+}
+
+.font-size-28 {
+  font-size: $font-size-28;
+}
+.font-size-30 {
+  font-size: $font-size-30;
+}
+.font-size-36 {
+  font-size: $font-size-36;
+}
+.font-size-40 {
+  font-size: $font-size-40;
+}
+
+.color-lighter-yellow{
+  color: $color-lighter-yellow;
+}
+.bg-color-lighter-yellow{
+  background-color: $color-lighter-yellow;
+}
+.color-primary {
+  color: $color-primary;
+}
+
+.bg-color-primary {
+  background-color: $color-primary;
+}
+
+.color-half-black {
+  color: $color-half-black;
+}
+
+.bg-color-half-black {
+  background-color: $color-half-black;
+}
+
+.color-light-yellow {
+  color: $color-light-yellow;
+}
+
+.bg-color-light-yellow {
+  background-color: $color-light-yellow;
+}
+
+.color-green {
+  color: $color-green;
+}
+.bg-color-green {
+  background-color: $color-green;
+}
+
+
+.color-text-green {
+  color: $color-text-green;
+}
+
+.bg-color-text-green {
+  background-color: $color-text-green;
+}
+
+.color-orange {
+  color: $color-orange;
+}
+
+.bg-color-orange {
+  background-color: $color-orange;
+}
+
+.color-red {
+  color: $color-red;
+}
+
+.bg-color-red {
+  background-color: $color-red;
+}
+
+.color-text-red {
+  color: $color-text-red;
+}
+
+.bg-color-text-red {
+  background-color: $color-text-red;
+}
+
+.color-danger-red {
+  color: $color-danger-red;
+}
+
+.bg-color-danger-red {
+  background-color: $color-danger-red;
+}
+
+.color-purple {
+  color: $color-purple;
+}
+
+.bg-color-purple {
+  background-color: $color-purple;
+}
+
+.color-blue {
+  color: $color-blue;
+}
+
+.bg-color-blue {
+  background-color: $color-blue;
+}
+
+.color-deep-blue {
+  color: $color-deep-blue;
+}
+
+.bg-color-deep-blue {
+  background-color: $color-deep-blue;
+}
+
+.color-grey {
+  color: $color-grey;
+}
+
+.bg-color-grey {
+  background-color: $color-grey;
+}
+
+.color-background-grey {
+  color: $color-background-grey;
+}
+
+.bg-color-background-grey {
+  background-color: $color-background-grey;
+}
+
+.color-sea-blue {
+  color: $color-sea-blue;
+}
+
+.bg-color-sea-blue {
+  background-color: $color-sea-blue;
+}
+
+.color-darkest-grey {
+  color: $color-darkest-grey;
+}
+
+.bg-color-darkest-grey {
+  background-color: $color-darkest-grey;
+}
+
+.color-darker-grey {
+  color: $color-darker-grey;
+}
+
+.bg-color-darker-grey {
+  background-color: $color-darker-grey;
+}
+
+.color-dark-grey {
+  color: $color-dark-grey;
+}
+
+.bg-color-dark-grey {
+  background-color: $color-dark-grey;
+}
+
+
+//Box Shadow
+.small-box-shadow {
+  box-shadow: $small-box-shadow;
+}
+
+.big-box-shadow {
+  box-shadow: $big-box-shadow;
+}
+//-----------//
