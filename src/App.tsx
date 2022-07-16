@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./dashboard.scss";
 import {
   Box,
   Grid,
@@ -10,6 +11,7 @@ import {
 } from "@mui/material";
 import { Container } from "@mui/system";
 import imgTwo from "../src/Assests/images/imgTwo.png";
+import Group34210 from "../src/Assests/images/Group34210.png";
 
 function App() {
   return (
@@ -20,31 +22,89 @@ function App() {
         </Box>
         <Grid container spacing={2} direction="row">
           <Grid item md={2} sm={6} xs={12}>
-            <Box bgcolor="red" textAlign="center">
-              <Card >
+            <Box>
+              <Card className="profile">
                 <CardContent>
-                <Box alignContent="center"><Avatar
-                    alt="Remy Sharp"
-                    src={imgTwo}
-                    
-                    sx={{ width: 90, height: 90 }}
-                    
-                  /></Box>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    <Box color="green" fontWeight={800} textAlign="center">
-                      <h2>Steven Tyler</h2>
+                  <Box alignContent="center" m="0 auto">
+                    <Avatar
+                      alt="Remy Sharp"
+                      src={imgTwo}
+                      sx={{ width: 90, height: 90, mx: "auto" }}
+                    />
+                  </Box>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Box
+                      className="color-primary"
+                      fontWeight={700}
+                      textAlign="center"
+                      mt={1}
+                      sx={{ fontSize: 18 }}
+                    >
+                      Steven Tyler
+                    </Box>
+                    <Box textAlign="center" mt={0} sx={{ fontSize: 14 }}>
+                      Applicant
                     </Box>
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
           </Grid>
-          <Grid item md={3} sm={6} xs={12}>
-            <Box bgcolor="red">1</Box>
+          <Grid item md={3} sm={6} xs={12} >
+            <Box mb={1} >
+              <Card className="profile" >
+                <CardContent sx={{display:"flex", justifyContent:"space-between"}}>
+                <Typography sx={{ fontSize: 14 }}>
+                    <Box
+                      color="green"
+                      fontWeight={700}
+                      mt={1}
+                      sx={{ fontSize: 18, alignItems:'start' }}
+                    >
+                      Case Name
+                    </Box>
+                    <Box mt={0} sx={{ fontSize: 14 }}>
+                    Case 1234
+                    </Box>
+                  </Typography>
+                  <Box>
+                    <Avatar
+                      alt="Remy Sharp"
+                      src={Group34210}
+                      // sx={{ width: 90, height: 90, mx: "auto" }}
+                    />
+                  </Box>
+                  
+                </CardContent>
+              </Card>
+            </Box>
+            <Box mb={1} >
+              <Card className="profile" >
+                <CardContent sx={{display:"flex", justifyContent:"space-between"}}>
+                <Typography sx={{ fontSize: 14 }}>
+                    <Box
+                      color="green"
+                      fontWeight={700}
+                      mt={1}
+                      sx={{ fontSize: 18, alignItems:'start' }}
+                    >
+                      Case Name
+                    </Box>
+                    <Box mt={0} sx={{ fontSize: 14 }}>
+                    Case 1234
+                    </Box>
+                  </Typography>
+                  <Box>
+                    <Avatar
+                      alt="Remy Sharp"
+                      src={Group34210}
+                      // sx={{ width: 90, height: 90, mx: "auto" }}
+                    />
+                  </Box>
+                  
+                </CardContent>
+              </Card>
+            </Box>
           </Grid>
           <Grid item md={4} sm={6} xs={12}>
             <Box bgcolor="red">1</Box>
@@ -59,6 +119,31 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import * as React from "react";
 // import Tabs from "@mui/material/Tabs";
