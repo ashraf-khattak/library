@@ -8,16 +8,116 @@ import {
   Card,
   CardContent,
   Avatar,
+  Tab,
+  Tabs,
 } from "@mui/material";
 import { Container } from "@mui/system";
 import imgTwo from "../src/Assests/images/imgTwo.png";
 import Group34210 from "../src/Assests/images/Group34210.png";
+import Group34209 from "../src/Assests/images/Group34209.png";
+import Group34216 from "../src/Assests/images/Group34216.png";
+
+
+// TABS Start
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+}
+//TABS Finished
+
+//Array of TOOLS Start
+const ArrayOfTools = [
+  {
+    name: "Active Case Documents",
+  },
+  {
+    name: "Panel Actions/ Comments",
+  },
+  {
+    name: "Panel Agenda",
+  },
+  {
+    name: "Panel Minutes- Administrator",
+  },
+  {
+    name: "Panel Minutes- Chair",
+  },
+  {
+    name: "Panel Checklist",
+  },
+  {
+    name: "Panel Outcome",
+  },
+]
+//Array of TOOLS Finished
+
+//Array of Evaluation Forms Start
+const ArrayOfEvaluationForms = [
+  {
+    name: "Active Case Documents",
+  },
+  {
+    name: "Panel Actions/ Comments",
+  },
+  {
+    name: "Panel Agenda",
+  },
+  {
+    name: "Panel Minutes- Administrator",
+  },
+  {
+    name: "Panel Minutes- Chair",
+  },
+  {
+    name: "Panel Checklist",
+  },
+  {
+    name: "Panel Outcome",
+  },
+]
+//Array of TOOLS Finished
+
 
 function App() {
+  //TABS Start
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+  //TABS Finished
+
   return (
     <div>
       <Container maxWidth="xl">
-        <Box color="green" fontWeight={800} mt={6}>
+        <Box color="green" fontWeight={800} mt={2}>
           <h2>Welcome Panel Member!</h2>
         </Box>
         <Grid container spacing={2} direction="row">
@@ -53,64 +153,198 @@ function App() {
           <Grid item md={3} sm={6} xs={12} >
             <Box mb={1} >
               <Card className="profile" >
-                <CardContent sx={{display:"flex", justifyContent:"space-between"}}>
-                <Typography sx={{ fontSize: 14 }}>
+                <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
+                  <Typography>
                     <Box
-                      color="green"
-                      fontWeight={700}
+                      color="dark"
+                      fontWeight={800}
                       mt={1}
-                      sx={{ fontSize: 18, alignItems:'start' }}
+                      sx={{ fontSize: 16, alignItems: 'start' }}
                     >
                       Case Name
                     </Box>
-                    <Box mt={0} sx={{ fontSize: 14 }}>
-                    Case 1234
+                    <Box mt={0} sx={{ fontSize: 16 }}>
+                      Case 1234
                     </Box>
                   </Typography>
                   <Box>
                     <Avatar
                       alt="Remy Sharp"
                       src={Group34210}
-                      // sx={{ width: 90, height: 90, mx: "auto" }}
+                    // sx={{ width: 90, height: 90, mx: "auto" }}
                     />
                   </Box>
-                  
                 </CardContent>
               </Card>
             </Box>
             <Box mb={1} >
-              <Card className="profile" >
-                <CardContent sx={{display:"flex", justifyContent:"space-between"}}>
-                <Typography sx={{ fontSize: 14 }}>
+              <Card className="profile case" >
+                <CardContent sx={{ display: "flex", justifyContent: "space-between" }}>
+                  <Typography>
                     <Box
-                      color="green"
-                      fontWeight={700}
+                      color="dark"
+                      fontWeight={800}
                       mt={1}
-                      sx={{ fontSize: 18, alignItems:'start' }}
+                      sx={{ fontSize: 16, alignItems: 'start' }}
                     >
-                      Case Name
+                      Social Worker
                     </Box>
-                    <Box mt={0} sx={{ fontSize: 14 }}>
-                    Case 1234
+                    <Box mt={0} sx={{ fontSize: 16 }}>
+                      John Doe
                     </Box>
                   </Typography>
                   <Box>
                     <Avatar
                       alt="Remy Sharp"
-                      src={Group34210}
-                      // sx={{ width: 90, height: 90, mx: "auto" }}
+                      src={Group34209}
+                      sx={{ bgcolor: "red" }}
                     />
                   </Box>
-                  
                 </CardContent>
               </Card>
             </Box>
           </Grid>
+
           <Grid item md={4} sm={6} xs={12}>
-            <Box bgcolor="red">1</Box>
+            <Box>
+              <Card className="profile">
+                <CardContent >
+                  <Typography sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Box
+                      color="dark"
+                      fontWeight={800}
+                      mt={1}
+                      sx={{ fontSize: 16, alignItems: 'start' }}
+                    >
+                      Hearing Date & Time
+                    </Box>
+                    <Box>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src={Group34210}
+                      />
+                    </Box>
+                  </Typography>
+
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Box
+                      className="color-primary"
+                      fontWeight={700}
+                      textAlign="center"
+                      mt={1}
+                      sx={{ fontSize: 46 }}
+                    >
+                      03:30 PM
+                    </Box>
+                    <Box textAlign="center" mt={0} sx={{ fontSize: 20 }}>
+                      Monday, 20/11/2021
+                    </Box>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
           </Grid>
           <Grid item md={3} sm={6} xs={12}>
-            <Box bgcolor="red">1</Box>
+            <Box>
+              <Card className="profile">
+                <CardContent >
+                  <Typography sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Box
+                      color="dark"
+                      fontWeight={800}
+                      mt={1}
+                      sx={{ fontSize: 16, alignItems: 'start' }}
+                    >
+                      Access Revoke Date
+                    </Box>
+                    <Box>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src={Group34210}
+                      />
+                    </Box>
+                  </Typography>
+                  <Typography sx={{ fontSize: 14 }}>
+                    <Box
+                      className="dark"
+                      fontWeight={600}
+                      textAlign="center"
+                      mt={1}
+                      sx={{ fontSize: 32 }}
+                    >
+                      20/11/2021
+                    </Box>
+                    <Box textAlign="center" mt={0} sx={{ fontSize: 20 }}>
+                      <img
+                        alt="Remy Sharp"
+                        src={Group34216}
+                      />
+                    </Box>
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </Grid>
+        </Grid>
+
+
+        {/* TABS PANEL */}
+
+
+        <Grid container className="profileTabs" spacing={2} direction="row" mt={1}>
+          <Grid item md={2} sm={12} xs={12}>
+            <Box>
+              <Tabs
+                orientation="vertical"
+                value={value}
+                onChange={handleChange}
+              >
+                <Tab label="Panel Tools" {...a11yProps(0)} />
+                <Tab label="Panel Evaluation Forms" {...a11yProps(1)} />
+              </Tabs>
+            </Box>
+          </Grid>
+
+
+          <Grid item md={10} sm={12} xs={12} >
+            <Card className="tool">
+              <TabPanel value={value} index={0}>
+                <Grid container spacing={2} direction="row">
+                  {ArrayOfTools.map((data) => (
+                    <Grid item md={3} sm={6} xs={12}>
+                      <Card className="tool ash">
+                        <Box
+                          color="dark"
+                          fontWeight={500}
+                          sx={{ fontSize: 16, alignItems: 'start', padding: "10px", width: "60%" }}
+                        >
+                          {data.name}
+                        </Box>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+              <Grid container spacing={2} direction="row">
+                  {ArrayOfTools.map((data) => (
+                    <Grid item md={3} sm={6} xs={12}>
+                      <Card className="tool ash">
+                        <Box
+                          color="dark"
+                          fontWeight={500}
+                          sx={{ fontSize: 16, alignItems: 'start', padding: "10px", width: "60%" }}
+                        >
+                          {data.name}
+                        </Box>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </TabPanel>
+
+
+            </Card>
           </Grid>
         </Grid>
       </Container>
@@ -121,280 +355,3 @@ function App() {
 export default App;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import * as React from "react";
-// import Tabs from "@mui/material/Tabs";
-// import {
-//   Box,
-//   Card,
-//   CardContent,
-//   Grid,
-//   CardActions,
-//   Tab,
-//   Typography,
-// } from "@mui/material";
-// import { Container } from "@mui/system";
-// import TextField from "@mui/material/TextField";
-// interface TabPanelProps {
-//   children?: React.ReactNode;
-//   index: number;
-//   value: number;
-// }
-
-// function TabPanel(props: TabPanelProps) {
-//   const { children, value, index, ...other } = props;
-
-//   return (
-//     <div
-//       role="tabpanel"
-//       hidden={value !== index}
-//       id={`vertical-tabpanel-${index}`}
-//       aria-labelledby={`vertical-tab-${index}`}
-//       {...other}
-//     >
-//       {value === index && (
-//         <Box>
-//           <Typography>{children}</Typography>
-//         </Box>
-//       )}
-//     </div>
-//   );
-// }
-
-// function a11yProps(index: number) {
-//   return {
-//     id: `vertical-tab-${index}`,
-//     "aria-controls": `vertical-tabpanel-${index}`,
-//   };
-// }
-
-// export default function VerticalTabs() {
-//   const [value, setValue] = React.useState(0);
-
-//   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-//     setValue(newValue);
-//   };
-
-//   return (
-// <Container maxWidth="lg" sx={{ mt: 8 }}>
-//   <h1 className='{margin="0px"}'>Hi Welcome</h1>
-//   <h2>John David</h2>
-//   <Grid>
-//     <Box
-//       sx={{
-//         flexGrow: 1,
-//         bgcolor: "background.paper",
-//         display: "flex",
-//         justifyContent: "left",
-//       }}
-//     >
-//       <Card>
-//         <Tabs
-//           orientation="vertical"
-//           variant="scrollable"
-
-//           value={value}
-//           onChange={handleChange}
-//           aria-label="Vertical tabs example"
-//           sx={{ borderRight: 1, borderColor: "divider" }}
-//         >
-//           <div className="text-start">
-
-//             <Tab
-//               style={{ color: "yellow" }}
-//               label="Set Key Info------------------------------------"
-//               {...a11yProps(0)}
-//             />
-//           </div>
-
-//           <Tab label="Manage Job Role-------------------------" {...a11yProps(1)} />
-//           <Tab
-//             label="Staff Settings-----------------------------------"
-//             {...a11yProps(2)}
-//           />
-//           <Tab
-//             label="Define Bank Holiday---------------------------"
-//             {...a11yProps(3)}
-//           />
-//           <Tab
-//             label="Neutral Vendors----------------------------"
-//             {...a11yProps(4)}
-//           />
-//           <Tab
-//             label="Email Notification Settings-----------"
-//             {...a11yProps(5)}
-//           />
-//           <Tab
-//             label="Staff / Client Terms & Conditions----"
-//             {...a11yProps(6)}
-//           />
-//           <Tab label="Agency Staff Agreement-----" {...a11yProps(7)} />
-//           <Tab label="Staff Referral System-----" {...a11yProps(8)} />
-//           <Tab
-//             label="Reset Primary Email and Phone---------"
-//             {...a11yProps(9)}
-//           />
-//           <Tab
-//             label="Choose Your Week Start Day----------"
-//             {...a11yProps(10)}
-//           />
-//           <Tab
-//             label="Admin Document Wallet-----------"
-//             {...a11yProps(11)}
-//           />
-//           <Tab label="Staff Document Wallet---------" {...a11yProps(12)} />
-//           <Tab
-//             label="Electronic Attendance Monitoring------"
-//             {...a11yProps(13)}
-//           />
-//           <Tab label="Festival Day Greetings------" {...a11yProps(14)} />
-//           <Tab
-//             label="Roles and Rights---------------------------"
-//             {...a11yProps(15)}
-//           />
-//         </Tabs>
-//       </Card>
-
-//       <CardContent
-//         style={{ borderColor: "dark", borderStyle: "solid" }}
-//         sx={{
-//           flexGrow: 1,
-//           bgcolor: "background.paper",
-//           display: "flex",
-//           justifyContent: "left",
-//         }}
-//       >
-//         <TabPanel value={value} index={0}>
-//           <Box
-//             component="form"
-//             sx={{
-//               "& .MuiTextField-root": { m: 1, width: "40ch" },
-//             }}
-//             noValidate
-//             autoComplete="off"
-//           >
-//             <div>
-//               <TextField
-//                 error
-//                 id="outlined-error"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//               />
-//               <TextField
-//                 error
-//                 id="outlined-error-helper-text"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//                 helperText="Incorrect entry."
-//               />
-//             </div>
-//             <div>
-//               <TextField
-//                 error
-//                 id="filled-error"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//                 variant="filled"
-//               />
-//               <TextField
-//                 error
-//                 id="filled-error-helper-text"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//                 helperText="Incorrect entry."
-//                 variant="filled"
-//               />
-//             </div>
-//             <div>
-//               <TextField
-//                 error
-//                 id="standard-error"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//                 variant="standard"
-//               />
-//               <TextField
-//                 error
-//                 id="standard-error-helper-text"
-//                 label="Error"
-//                 defaultValue="Hello World"
-//                 helperText="Incorrect entry."
-//                 variant="standard"
-//               />
-//             </div>
-//           </Box>
-//         </TabPanel>
-//         <TabPanel value={value} index={1}>
-//           <Box> Item Two</Box>
-//         </TabPanel>
-//         <TabPanel value={value} index={2}>
-//           Item Three
-//         </TabPanel>
-//         <TabPanel value={value} index={3}>
-//           Item Four
-//         </TabPanel>
-//         <TabPanel value={value} index={4}>
-//           Item Five
-//         </TabPanel>
-//         <TabPanel value={value} index={5}>
-//           Item Six
-//         </TabPanel>
-//         <TabPanel value={value} index={6}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={7}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={8}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={9}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={10}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={11}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={12}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={13}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={14}>
-//           Item Seven
-//         </TabPanel>
-//         <TabPanel value={value} index={15}>
-//           Item Seven
-//         </TabPanel>
-//       </CardContent>
-//     </Box>
-//   </Grid>
-// </Container>
-//   );
-// }

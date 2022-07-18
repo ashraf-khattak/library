@@ -1,4 +1,100 @@
-.profile{
-    
-        box-shadow: 2px 3px 5px rgba(14, 145, 140, 0.3)!important;
+.profile {
+
+    box-shadow: 2px 3px 5px rgba(14, 145, 140, 0.3) !important;
+
+    .css-16q47u3-MuiCardContent-root:last-child {
+        padding-bottom: 18px !important;
+    }
+
 }
+
+.profileTabs {
+    button#vertical-tab-0 {
+        border: 2px solid #0E918C;
+        margin-bottom: 2px;
+        background-color: #0E918C;
+        border-radius: 10px;
+        color: #fff;
+        /* padding: 20px 0px; */
+        height: 98px;
+        margin-bottom: 10px;
+    }
+
+    button#vertical-tab-1 {
+        border: 2px solid #F6830F;
+        margin-bottom: 2px;
+        background-color: #F6830F;
+        border-radius: 10px;
+        color: #fff;
+        /* padding: 20px 0px; */
+        height: 98px;
+    }
+
+    // .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    //     color: #1976d2;
+    // }
+    span.MuiTabs-indicator.css-10d9dml-MuiTabs-indicator {
+        display: none;
+    }
+
+
+    
+
+    .css-19kzrtu {
+        padding: 10px !important;
+    }
+
+    .tool {
+
+        box-shadow: 0px 0px 7px 3px rgba(14, 145, 140, 0.2) !important;
+
+        .css-ribyel:hover {
+            color: red;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            padding: 10px;
+            width: 50%;
+        }
+        .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.tool.ash.css-bhp9pd-MuiPaper-root-MuiCard-root {
+            border-left: 7px solid #0e918c;
+            border-radius: 5px;
+            height: 85px;
+            padding-left: 30px;
+        }
+        
+    }
+// .evaluationforms{
+//     .css-ribyel:hover {
+//         color: red;
+//         font-weight: 600;
+//         font-size: 16px;
+//         line-height: 20px;
+//         padding: 10px;
+//         width: 50%;
+//     }
+//     .evaluationforms.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.tool.ash.css-bhp9pd-MuiPaper-root-MuiCard-root {
+//         border-left: 7px solid #910e12;
+//         border-radius: 5px;
+//         height: 85px;
+//         padding-left: 30px;
+//     }
+// }
+   
+}
+
+
+
+
+
+// .MuiBox-root.css-19kzrtu {
+//     height: 185px;
+//     padding: 10px;
+// }
+
+// .ash .css-46bh2p-MuiCardContent-root:last-child {
+//     padding-bottom: 2px;
+// }
+// .ash .css-46bh2p-MuiCardContent-root {
+//     padding: 2px;
+// }
