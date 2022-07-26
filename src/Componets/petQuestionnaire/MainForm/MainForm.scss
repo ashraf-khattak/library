@@ -1,0 +1,83 @@
+@import "../../../App.scss";
+.form-wrapper {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  .secondary-title {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: inherit;
+    margin-bottom: 5px;
+    display: block !important;
+  }
+  #labelInput {
+    width: 280px;
+    @media screen and (max-width: 460px) {
+      width: 100%;
+    }
+  }
+  .error {
+    color: red;
+    font-size: 14px !important;
+  }
+  .success {
+    color: green;
+    font-size: 14px !important;
+  }
+
+  .myInput {
+    background-color: white !important;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+  }
+
+  .error-border {
+    border: 1px solid red !important;
+  }
+
+  .error-color {
+    color: red;
+  }
+
+  .error-position {
+    position: absolute;
+    bottom: -24px;
+    color: red;
+  }
+
+  .css-gtrkag-MuiInputBase-input-MuiFilledInput-input {
+    padding: 10px !important;
+  }
+  .input-container {
+    display: flex;
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0.15rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 20px;
+    option:not(:first-of-type) {
+      color: #cacaca;
+    }
+  }
+  .input-control {
+    width: 100% !important;
+    border: none;
+    padding: 0.375rem 0.25rem;
+
+    &:focus {
+      outline: none;
+    }
+    &:focus .input-container {
+      border: 1px solid green !important;
+    }
+  }
+  .css-4muqlg-MuiGrid-root {
+    margin-left: -10px !important;
+  }
+}
+@media screen and (max-width: "510px") {
+  .css-4muqlg-MuiGrid-root,
+  .css-kzfer0-MuiGrid-root {
+    margin-left: -10px !important;
+  }
+}

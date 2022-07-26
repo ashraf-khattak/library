@@ -11,7 +11,7 @@ import Link from "@mui/material/Link";
 // import HomeImg from "../../../../assests/Home.svg";
 
 // import BasicInformation from "../application-form/BasicInformation/BasicInformation";
-import Contact from "./Componets/petQuestionnaire/Contact";
+// import Contact from "./Contact/Contact";
 // import Reference from "./Reference/Reference";
 // import ExPartners from "./ExPartners/ExPartners";
 // import PlacementReference from "./PlacementReference/PlacementReference";
@@ -25,7 +25,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 // import Navbar from "../../../UI/sub-sections-top-nav/SubSectionTopNav";
 
-const App = () => {
+const PetQuestionnaire = () => {
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -99,7 +99,7 @@ const App = () => {
               {/* <BasicInformation /> */}
             </TabPanel>
             <TabPanel value="2">
-              <Contact myValue={value} setMyValue={setValue} />
+              {/* <Contact myValue={value} setMyValue={setValue} /> */}
             </TabPanel>
             <TabPanel value="3">
               {/* <Family myValue={value} setMyValue={setValue} /> */}
@@ -130,4 +130,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default PetQuestionnaire;
